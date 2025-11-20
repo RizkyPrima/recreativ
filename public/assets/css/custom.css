@@ -1,0 +1,27 @@
+/* public/assets/css/custom.css */
+input:focus,
+textarea:focus {
+    outline: none;
+    box-shadow: 0 0 0 4px rgba(47, 99, 255, 0.08);
+}
+
+/* Floating animation megaphone */
+@keyframes floatY {
+    0% {
+        transform: translateY(0) rotate(6deg);
+    }
+
+    50% {
+        transform: translateY(-10px) rotate(4deg);
+    }
+
+    100% {
+        transform: translateY(0) rotate(6deg);
+    }
+}
+
+.animate-float {
+    animation: floatY 3.5s ease-in-out infinite;
+    will-change: transform;
+    transform-origin: 50% 50%;
+}
