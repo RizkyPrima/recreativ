@@ -21,7 +21,7 @@ class Cache extends BaseConfig
      * The name of the preferred handler that should be used. If for some reason
      * it is not available, the $backupHandler will be used in its place.
      */
-    public string $handler = 'file';
+    public string $handler = 'dummy';
 
     /**
      * --------------------------------------------------------------------------
@@ -111,9 +111,10 @@ class Cache extends BaseConfig
      * @var array<string, int|string|null>
      */
     public array $file = [
-        'storePath' => WRITEPATH . 'cache/',
-        'mode'      => 0640,
-    ];
+    'storePath' => '',
+    'mode'      => 0640,
+];
+
 
     /**
      * -------------------------------------------------------------------------
@@ -162,7 +163,7 @@ class Cache extends BaseConfig
      */
     public array $validHandlers = [
         'dummy'     => DummyHandler::class,
-        'file'      => FileHandler::class,
+        //'file'      => FileHandler::class,
         'memcached' => MemcachedHandler::class,
         'predis'    => PredisHandler::class,
         'redis'     => RedisHandler::class,
