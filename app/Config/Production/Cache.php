@@ -8,7 +8,7 @@ use CodeIgniter\Cache\Handlers\DummyHandler;
 class Cache extends BaseConfig
 {
     /**
-     * Use 'dummy' on serverless (Vercel) because filesystem is read-only.
+     * Use dummy handler for serverless (Vercel) because filesystem is read-only.
      */
     public string $handler = 'dummy';
 
