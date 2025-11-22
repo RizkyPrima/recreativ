@@ -10,8 +10,7 @@ class Cache extends BaseConfig
 {
     /**
      * Primary Handler
-     * Serverless platforms like Vercel must use dummy handler
-     * because filesystem is read-only.
+     * Use dummy for Vercel (read-only filesystem)
      */
     public string $handler = 'dummy';
 
@@ -48,7 +47,7 @@ class Cache extends BaseConfig
     public string $reservedCharacters = '{}()/\@:';
 
     /**
-     * File settings — unused because handler is dummy
+     * File settings (unused)
      *
      * @var array<string, int|string|null>
      */
@@ -58,7 +57,7 @@ class Cache extends BaseConfig
     ];
 
     /**
-     * Memcached settings (not used on Vercel)
+     * Memcached settings (unused)
      */
     public array $memcached = [
         'host'   => '127.0.0.1',
@@ -68,7 +67,7 @@ class Cache extends BaseConfig
     ];
 
     /**
-     * Redis / Predis settings (not used on Vercel)
+     * Redis settings (unused)
      */
     public array $redis = [
         'host'     => '127.0.0.1',
@@ -79,7 +78,7 @@ class Cache extends BaseConfig
     ];
 
     /**
-     * Valid Handlers — limit only to dummy for safety
+     * Valid Handlers — only dummy enabled
      */
     public array $validHandlers = [
         'dummy' => DummyHandler::class,
