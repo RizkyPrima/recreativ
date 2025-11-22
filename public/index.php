@@ -1,42 +1,5 @@
 <?php
-// DEBUG: temporary diagnostics - paste at VERY TOP of public/index.php
-echo "<pre>--- DEBUG START ---\n";
 
-// Environment values
-echo "getenv('CI_ENVIRONMENT'): " . (getenv('CI_ENVIRONMENT') ?: '(none)') . PHP_EOL;
-echo "getenv('APP_BASE_URL'): " . (getenv('APP_BASE_URL') ?: '(none)') . PHP_EOL;
-echo "getenv('VERCEL_URL'): " . (getenv('VERCEL_URL') ?: '(none)') . PHP_EOL;
-
-// Check if production override file exists on runtime
-$prodPath = __DIR__ . '/../app/Config/Production/Cache.php';
-echo "Production Cache file exists: " . (file_exists($prodPath) ? 'YES' : 'NO') . " -> $prodPath" . PHP_EOL;
-
-// Try to instantiate Config\Cache and show handler
-try {
-    $conf = new \Config\Cache();
-    echo "Config\\Cache handler property: " . ($conf->handler ?? '(no handler)') . PHP_EOL;
-    $r = new ReflectionClass($conf);
-    echo "Config\\Cache class file: " . $r->getFileName() . PHP_EOL;
-} catch (\Throwable $e) {
-    echo "Error instantiating Config\\Cache: " . $e->getMessage() . PHP_EOL;
-}
-
-// Also check Production namespace if exists
-try {
-    if (class_exists('\Config\Production\Cache')) {
-        $pc = new \Config\Production\Cache();
-        echo "Config\\Production\\Cache handler: " . ($pc->handler ?? '(no handler)') . PHP_EOL;
-        $rp = new ReflectionClass($pc);
-        echo "Config\\Production\\Cache file: " . $rp->getFileName() . PHP_EOL;
-    } else {
-        echo "Config\\Production\\Cache class: (not found)\n";
-    }
-} catch (\Throwable $e) {
-    echo "Error with Production Cache class: " . $e->getMessage() . PHP_EOL;
-}
-
-echo "--- DEBUG END ---</pre>";
-exit;
 
 // === original file content (unchanged below debug block) ===
 
