@@ -6,7 +6,7 @@ use CodeIgniter\Config\BaseConfig;
 
 class Session extends BaseConfig
 {
-    // Gunakan ArrayHandler untuk serverless (stateless per-request)
+    // Use ArrayHandler on serverless (non-persistent per-request)
     public string $driver = 'CodeIgniter\Session\Handlers\ArrayHandler';
     public string $cookieName = 'ci_session';
     public int $expiration = 7200;
