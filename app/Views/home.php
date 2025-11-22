@@ -16,7 +16,7 @@
         <div class="mt-2 flex gap-4 items-center text-sm text-slate-600">
             <div class="flex items-center gap-2">
                 <!-- sesuai instruksi: gunakan path file yang diupload -->
-                <img src="<?= base_url('public/assets/img/logo.png') ?>" alt="tiktok" class="w-6 h-6" />
+                <img src="<?= base_url('assets/img/logo.png') ?>" alt="tiktok" class="w-6 h-6" />
                 <span>@recreative</span>
             </div>
 
@@ -81,7 +81,7 @@
             </div>
         </div>
 
-        <img src="<?= base_url('public/assets/img/TOA.png') ?>"
+        <img src="<?= base_url('assets/img/TOA.png') ?>"
             alt="toa"
             class="absolute -left-32 -bottom-14 w-36 md:w-44 transform rotate-6 rounded-lg animate-float" />
     </div>
