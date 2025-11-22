@@ -18,7 +18,7 @@
         <div class="flex items-center gap-3">
             <!-- Logo Circle -->
             <div class="w-10 h-10  flex items-center justify-center">
-                <img src="<?= base_url('public/assets/img/logo.png') ?>" alt="Logo" class="w-7 h-7 object-contain">
+                <img src="<?= base_url('assets/img/logo.png') ?>" alt="Logo" class="w-7 h-7 object-contain">
             </div>
 
             <!-- Brand Text -->
