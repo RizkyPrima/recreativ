@@ -30,6 +30,17 @@ class App extends BaseConfig
      *
      * @var list<string>
      */
+
+    public function __construct()
+{
+    parent::__construct();
+
+    if (empty($this->baseURL)) {
+        $this->baseURL = getenv('APP_BASE_URL') ?: 'http://localhost:8080/';
+    }
+}
+
+    
     public array $allowedHostnames = [];
 
     /**
