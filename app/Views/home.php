@@ -81,7 +81,7 @@
             </div>
         </div>
 
-        <img src="<?= base_url('assets/img/TOA.png') ?>"
+        <img src="<?= base_url('public/assets/img/TOA.png') ?>"
             alt="toa"
             class="absolute -left-32 -bottom-14 w-36 md:w-44 transform rotate-6 rounded-lg animate-float" />
     </div>
