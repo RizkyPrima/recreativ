@@ -36,19 +36,4 @@
     "scripts": {
         "test": "phpunit"
     }
-    {
-  "framework": false,
-  "routes": [
-    {
-      "src": "/(.*)",
-      "dest": "/public/$1"
-    }
-  ],
-  "build": {
-    "env": {
-      "CI_ENVIRONMENT": "production"
-    }
-  }
-}
-
 }
