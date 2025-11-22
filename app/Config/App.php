@@ -200,4 +200,22 @@ class App extends BaseConfig
      * @see http://www.w3.org/TR/CSP/
      */
     public bool $CSPEnabled = false;
+    
+    public function __construct()
+{
+    parent::__construct();
+
+    // Jika baseURL kosong, bangun otomatis
+    if (empty($this->baseURL)) {
+        $scheme = (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off')
+                  || (($_SERVER['HTTP_X_FORWARDED_PROTO'] ?? '') === 'https')
+                  ? 'https' : 'http';
+
+        $host = $_SERVER['HTTP_HOST'] ?? 'localhost';
+
+        // NOTE: Jangan tambah "/" di akhir, CI akan handle
+        $this->baseURL = $scheme . '://' . $host . '/';
+    }
+}
+
 }
