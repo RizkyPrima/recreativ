@@ -112,8 +112,7 @@
 <section id="portfolio" class="mt-12">
     <h2 class="text-2xl font-bold mb-4">Portfolio Terpilih</h2>
     <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
-        <img src="/mnt/data/d70772e7-7689-4eba-ad53-b6869f6d0302.png" alt="portfolio-1" class="w-full rounded-xl shadow" />
-        <div class="p-6 rounded-xl bg-white shadow flex flex-col justify-between">
+   <div class="p-6 rounded-xl bg-white shadow flex flex-col justify-between">
             <div>
                 <h4 class="font-semibold">Kampanye TikTok</h4>
                 <p class="text-sm text-slate-600">Meningkatkan awareness & leads untuk UMKM.</p>
