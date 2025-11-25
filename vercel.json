@@ -1,14 +1,9 @@
 {
-  "framework": false,
-  "routes": [
-    {
-      "src": "/(.*)",
-      "dest": "/public/$1"
-    }
+  "version": 2,
+  "builds": [
+    { "src": "public/**", "use": "@vercel/static" }
   ],
-  "build": {
-    "env": {
-      "CI_ENVIRONMENT": "production"
-    }
-  }
+  "routes": [
+    { "src": "/(.*)", "dest": "/public/$1" }
+  ]
 }
