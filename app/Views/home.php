@@ -27,8 +27,7 @@
             </div>
         </div>
     </div>
-
-    <!-- Card area (menggantikan bagian pajak) -->
+    
     <div class="relative">
         <div class="rounded-3xl bg-gradient-to-br from-[#1f2c66] to-[#0b1533] text-white p-8 shadow-2xl">
             <div class="text-sm uppercase tracking-wide text-slate-300">Featured Services</div>
@@ -121,7 +120,6 @@
             </div>
             <div class="text-sm text-slate-500 mt-4">View case study →</div>
         </div>
-        <img src="/mnt/data/63978c24-843c-4ae5-a7ed-5631c2695f40.png" alt="portfolio-2" class="w-full rounded-xl shadow" />
     </div>
 </section>
 
