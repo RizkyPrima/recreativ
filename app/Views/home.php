@@ -15,8 +15,7 @@
 
         <div class="mt-2 flex gap-4 items-center text-sm text-slate-600">
             <div class="flex items-center gap-2">
-                <!-- sesuai instruksi: gunakan path file yang diupload -->
-                <img src="<?= base_url('assets/img/logo.png') ?>" alt="tiktok" class="w-6 h-6" />
+                <img src="<?= esc(base_url('assets/img/logo.png')) ?>" alt="Logo" class="w-7 h-7 object-contain">
                 <span>@recreative</span>
             </div>
 
